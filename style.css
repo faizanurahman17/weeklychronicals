@@ -74,6 +74,8 @@ p{
   font-size: .8rem;
   top: 5%;
   color: red;
+}
+.p{
   animation: theblink .5s infinite;
 }
 @keyframes theblink {
