@@ -1,0 +1,249 @@
+*{
+  margin: 0;
+  padding: 0;
+  font-size: 1rem;
+  z-index: 5;
+  font-family: Griffy;
+  
+}
+
+/* Neumorphic Styles */
+body {
+  position: relative;
+  height: 100vh;
+  width: 100vw;
+  font-family: Arial, sans-serif;
+  text-align: center;
+  background-color: #000000;
+  /*background-color: #e0e0e0;
+  background-image: url('back1.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100;*/
+}
+
+.neumorphic {
+  border-radius: 12px;
+  
+  box-shadow: 7px 7px 15px #000000, 
+              -7px -7px 15px #000000;
+  border: none;
+  outline: none;
+  padding: 10px;
+  margin: 10px;
+  font-size: 14px;
+  transition: all 0.3s ease;
+}
+
+/*.neumorphic:focus {
+  box-shadow: inset 7px 7px 15px #959494,
+    inset -7px -7px 15px #D4D4D4;
+}*/
+
+main{
+  position: fixed;
+  top: 0;
+  width: 100vw;
+  height: 100px;
+  display: flex;
+  flex-direction: column;
+  background: none;
+  
+}
+
+header {
+  height: 50%;
+  width: 100%;
+}
+
+h1,p {
+  width: 100%;
+  text-align: center;
+  position: relative;
+  top: 2%;
+  font-size: 1.2rem;
+  font-family: Griffy;
+  font-family: Creepster;
+  font-family: Butcherman;
+  font-family: Nosifer;
+  color: #fff;
+  background-color: none;
+}
+p{
+  font-family: Creepster, 'Metal Mania';
+  font-size: .8rem;
+  top: 5%;
+  color: red;
+  animation: theblink .5s infinite;
+}
+@keyframes theblink {
+  0%{
+    opacity: 0;
+    color: #ff7700;
+  }100%{
+    opacity: 1;
+    color: red;
+  }
+  /* 0%{
+    opacity: 0;
+  }25%{
+    opacity: 1;
+  }50%{
+    opacity: 0;
+  }100%{
+    opacity: 1;
+  } */
+}
+
+.container {
+  z-index: 1;
+  position: absolute;
+  bottom: 0;
+  width: 100vw;
+  height: calc(100vh);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  overflow: auto;
+  background-color: #464646;
+  background-image: url('back2.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: fill;
+}
+
+/* .year-container:nth-child(1){
+  margin-top: 10vh;
+} */
+
+.year-container {
+  margin: 0px 10px;
+  margin-top: 105px;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: inset 1px 1px 10px #9F9F9F, 
+             inset -1px -1px 10px #A4A4A4;
+  backdrop-filter: blur(10px);
+  width: 400px;
+  height: auto;
+  border-bottom: 1px solid #fff;
+  border-right: 1px solid #fff;
+}
+
+.year-title {
+  font-size: 1.2rem;
+  margin-bottom: 15px;
+  text-align: center;
+  color: #B60000;
+  font-weight: bold;
+}
+
+/* Week Box Styles */
+.box {
+  width: 15px;
+  height: 15px; /* Square shape */
+  display: inline-block;
+  margin: 3px; /* Extra space between boxes */
+  border-radius: 4px;
+  width: 40px;
+  height: 40px;
+}
+
+.red,.green,.blinking {
+  box-shadow: inset 3px 4px 10px #9F9F9F, 
+             inset -3px -4px 10px #A4A4A4;
+}
+.red {
+  background-color: #DC4545;
+}
+
+.green {
+  background-color: #55E183;
+}
+
+.blinking {
+  background-color: #E6D96C;
+  animation: blink 1s infinite;
+}
+
+@keyframes blink {
+  0% { background-color: yellow; }
+  50% { background-color: transparent; }
+  100% { background-color: yellow; }
+}
+
+/* Button Styles */
+nav {
+  /* position: absolute;
+  top: 40%; */
+  height: 50%;
+  width: 100%;
+  display: flex; 
+  justify-content: center;
+  align-items: center;
+}
+
+main,nav,header{
+  backdrop-filter: blur(10px);
+  color: #474747;
+}
+
+button {
+  margin: 10px;
+  padding: 10px;
+  border-radius: 12px;
+  border: none;
+  transition: 0.3s;
+  
+}
+
+input[type="date"] {
+  width: 200px;
+  padding: 10px;
+  margin: 10px;
+  border-radius: 12px;
+  border: none;
+  outline: none;
+  transition: 0.3s;
+}
+
+/* Distinct styles for the year titles */
+.year-title::before {
+  content: "Year ";
+  font-style: italic;
+  color: #969696;
+}
+
+/* Summary Paragraph Styles */
+.summary {
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80%;
+  text-align: center;
+  font-size: 1rem;
+  color: #ffffff;
+  background: #333333;
+  border-radius: 8px;
+  padding: 10px;
+  margin-top: 10px;
+  box-shadow: 0 0 10px #0000004d;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: Creepster;
+}
+
+/* Highlight Colors */
+.highlight-red {
+  color: #DC4545; /* Red color */
+}
+
+.highlight-green {
+  color: #55E183; /* Green color */
+}
+
+.highlight-yellow {
+  color: #E6D96C; /* Yellow color */
+}
